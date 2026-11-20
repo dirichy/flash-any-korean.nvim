@@ -4,6 +4,10 @@
 
 [flash-any.nvim](https://github.com/dirichy/flash-any.nvim)에서 두벌식 자판으로 한글을 검색하고 이동합니다.
 
+![Korean search and jump](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table.gif)
+
+[MP4](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table.mp4) · [Verification report](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table-verification.json)
+
 ## 설치
 
 Neovim 0.11 이상, make, C 컴파일러가 필요합니다. lazy.nvim 설정:
@@ -57,10 +61,6 @@ Shift 구분을 유지하려면 기본값을 사용하세요. 다른 모드는 �
 ```lua
 opts = { sources = { { name = "korean", matcher = "prefix" } } }
 ```
-
-![Korean search and jump](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table.gif)
-
-[MP4](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table.mp4) · [Verification report](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table-verification.json)
 
 [유지 관리 및 로컬 테스트](docs/maintenance.md) · [데이터 출처](THIRD_PARTY.md)
 

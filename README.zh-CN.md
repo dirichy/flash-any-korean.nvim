@@ -4,6 +4,10 @@
 
 为 [flash-any.nvim](https://github.com/dirichy/flash-any.nvim) 提供独立的韩文 source，采用 두벌식（两套式）键位。
 
+![Korean search and jump](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table.gif)
+
+[MP4](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table.mp4) · [Verification report](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table-verification.json)
+
 需要 Neovim 0.11+、make 和 C 编译器。
 
 lazy.nvim 配置：
@@ -41,10 +45,6 @@ lazy.nvim 配置：
 ```lua
 opts = { sources = { { name = "korean", matcher = "prefix" } } }
 ```
-
-![Korean search and jump](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table.gif)
-
-[MP4](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table.mp4) · [Verification report](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table-verification.json)
 
 [维护与本地验证](docs/maintenance.md) · [数据来源](THIRD_PARTY.md)
 
