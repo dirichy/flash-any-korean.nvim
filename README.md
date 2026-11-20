@@ -7,7 +7,6 @@
 ## 설치
 
 Neovim 0.11 이상, make, C 컴파일러가 필요합니다. lazy.nvim 설정:
-아래 원격 설치 설정은 저장소 공개 후 사용할 수 있습니다.
 
 ```lua
 {
@@ -59,8 +58,9 @@ Shift 구분을 유지하려면 기본값을 사용하세요. 다른 모드는 �
 opts = { sources = { { name = "korean", matcher = "prefix" } } }
 ```
 
-[데모 워크플로](https://github.com/dirichy/flash-any-korean.nvim/actions/workflows/demo.yml)
-(첫 공개 전).
+![Korean search and jump](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table.gif)
+
+[MP4](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table.mp4) · [Verification report](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table-verification.json)
 
 [유지 관리 및 로컬 테스트](docs/maintenance.md) · [데이터 출처](THIRD_PARTY.md)
 

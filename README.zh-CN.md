@@ -6,7 +6,7 @@
 
 需要 Neovim 0.11+、make 和 C 编译器。
 
-lazy.nvim 配置（远程安装需要先发布仓库）：
+lazy.nvim 配置：
 
 ```lua
 {
@@ -42,7 +42,9 @@ lazy.nvim 配置（远程安装需要先发布仓库）：
 opts = { sources = { { name = "korean", matcher = "prefix" } } }
 ```
 
-[演示工作流](https://github.com/dirichy/flash-any-korean.nvim/actions/workflows/demo.yml)（尚未首次发布）。
+![Korean search and jump](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table.gif)
+
+[MP4](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table.mp4) · [Verification report](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table-verification.json)
 
 [维护与本地验证](docs/maintenance.md) · [数据来源](THIRD_PARTY.md)
 

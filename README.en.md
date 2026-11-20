@@ -6,7 +6,7 @@ Korean Dubeolsik keyboard matching for [flash-any.nvim](https://github.com/diric
 
 Requires Neovim 0.11+, make and a C compiler.
 
-Install with lazy.nvim (the repository must be published before remote installation):
+Install with lazy.nvim:
 
 ```lua
 {
@@ -45,8 +45,9 @@ Use `full_code` to preserve Shift distinctions. Other modes broaden matches;
 opts = { sources = { { name = "korean", matcher = "prefix" } } }
 ```
 
-[Demo workflow](https://github.com/dirichy/flash-any-korean.nvim/actions/workflows/demo.yml)
-(first release pending).
+![Korean search and jump](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table.gif)
+
+[MP4](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table.mp4) · [Verification report](https://github.com/dirichy/flash-any-korean.nvim/releases/download/demos/table-verification.json)
 
 [Maintenance and local testing](docs/maintenance.md) · [Data provenance](THIRD_PARTY.md)
 
