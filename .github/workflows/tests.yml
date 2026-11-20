@@ -1,0 +1,41 @@
+name: Source tests
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: dirichy/flash-any.nvim
+          ref: main
+          path: .deps/core
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: folke/flash.nvim
+          ref: 5f0f270fdc7c5b0c21d903ee85b9cb06f2ac636a
+          path: .deps/flash.nvim
+          persist-credentials: false
+      - uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+          version: v0.11.0
+      - name: Generate, compare and test real matching and jumps
+        env:
+          FLASH_ANY_ROOT: ${{ github.workspace }}/.deps/core
+          FLASH_NVIM_PATH: ${{ github.workspace }}/.deps/flash.nvim
+          FLASH_ANY_SOURCE_ROOT: ${{ github.workspace }}
+          NVIM_LOG_FILE: ${{ runner.temp }}/korean-nvim.log
+        run: |
+          make -C "$FLASH_ANY_ROOT"
+          nvim --clean -l scripts/generate.lua "$RUNNER_TEMP/korean.tsv"
+          cmp lua/flash-any/tables/korean.tsv "$RUNNER_TEMP/korean.tsv"
+          nvim --clean -l minimal.lua
+          nvim --clean -l tests/korean.lua
+          nvim --clean -l tests/jump.lua
